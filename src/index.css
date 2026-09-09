@@ -1,0 +1,118 @@
+/* ==========================================================================
+   1. VARIABLES DE TEMA Y TIPOGRAFÍA
+   ========================================================================== */
+:root {
+  /* ── Verdes ── */
+  --green-deep:   #0d1f14;   /* Fondo panel izquierdo (el más oscuro) */
+  --green-dark:   #132b1c;   /* Fondo oscuro alternativo               */
+  --green-mid:    #1a6b3c;   /* Acento principal — botones, links, focus */
+  --green-light:  #22883f;   /* Hover de botón primario                */
+  --green-lime:   #4ade80;   /* Acento vivo — íconos, highlights       */
+  --green-pale:   #d1fae5;   /* Fondo muy suave — selected states      */
+
+  /* ── Blancos y superficies ── */
+  --surface:      #f7f9f7;   /* Fondo general de la app                */
+  --surface-2:    #eef3ee;   /* Fondo de tabs, inputs secundarios      */
+  --white:        #ffffff;   /* Fondo de inputs, cards                 */
+
+  /* ── Negros, Grises y bordes ── */
+  --border:       #d4e0d4;   /* Bordes de inputs y divisores           */
+  --text-primary: #0d1f14;   /* Texto principal — títulos y labels     */
+  --text-muted:   #5a7260;   /* Texto secundario — subtítulos          */
+  --text-light:   #8aa68e;   /* Texto terciario — placeholders, notas  */
+  --color-text:   #000000;      /* Texto negro — parrafos - textos largos  */
+
+  /* ── Estados y feedback ── */
+  --error:        #dc2626;   /* Errores de validación                  */
+  --success:      #16a34a;   /* Confirmaciones y éxito                 */
+  --warning:      #d97706;   /* Alertas — ej: stock bajo               */
+
+  /* ── Overlays (para modales y fondos semitransparentes) ── */
+  --overlay-dark:     rgba(13, 31, 20, 0.60);
+  --overlay-light:    rgba(247, 249, 247, 0.80);
+  --border-subtle:    rgba(255, 255, 255, 0.10);  /* Bordes sobre fondo oscuro */
+  --highlight-lime:   rgba(74, 222, 128, 0.12);   /* Círculos decorativos      */
+
+  /* Fuentes */
+  --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Base */
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--color-text);
+  background-color: var(--surface);
+  color-scheme: light dark;
+
+  /* Renderizado de texto */
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Tamaño de ancho y alto */
+  --max-width-dvw: 100dvw;
+  --min-height-dvh: 100dvh;
+  --max-width: 1280px;
+  --min-width: 768px;
+}
+
+/* ==========================================================================
+   2. RESETEO ESTRUCTURAL (Box Sizing y Márgenes)
+   ========================================================================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  /* Desplazamiento suave para enlaces con anclas */
+  scroll-behavior: smooth;
+}
+
+body {
+  /* Uso de viewport dinámico para móviles */
+  max-width: var(--max-width-dvw);
+  min-height: var(--min-height-dvw);
+  background-color: var(--surface);
+  color: var(--color-text);
+}
+
+/* ==========================================================================
+   3. ELEMENTOS DE FORMULARIO Y TIPOGRAFÍA
+   ========================================================================== */
+/* Heredar fuentes en elementos de entrada */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+/* Evitar desbordamiento de imágenes y medios */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* Enlaces */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Contenedor principal de React */
+#root {
+  max-width: var(--max-width-dvw);
+  min-height: var(--min-height-dvw);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

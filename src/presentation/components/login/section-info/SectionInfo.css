@@ -1,0 +1,144 @@
+.info-panel {
+  position: relative;
+  background-color: var(--green-deep);
+  width: 40%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: clamp(1.5rem, 4vh, 2.5rem) clamp(1rem, 2.5vw, 2rem);
+  overflow: hidden;
+}
+
+/* ==========================================================================
+   DECORACIÓN DE FONDO (Círculos)
+   ========================================================================== */
+.info-panel__background-decor {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.info-panel__circle {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid var(--highlight-lime);
+}
+
+.info-panel__circle--lg {
+  width: 300px;
+  height: 300px;
+  top: -90px;
+  left: 150px;
+}
+
+.info-panel__circle--md {
+  width: 450px;
+  height: 450px;
+  bottom: -240px;
+  left: -150px;
+  border-color: var(--highlight-lime);
+}
+
+/* ==========================================================================
+   SECCIONES DEL PANEL
+   ========================================================================== */
+.info-panel__header,
+.info-panel__content,
+.info-panel__footer {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+}
+
+/* Header */
+.info-panel__header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.info-panel__logo-wrapper {
+  background-color: var(--green-lime);
+  border-radius: 12px;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  flex-shrink: 0;
+}
+
+.info-panel__brand {
+  display: flex;
+  flex-direction: column;
+  font-weight: 700;
+}
+
+.info-panel__title {
+  color: var(--surface);
+  font-size: 1.1rem;
+}
+
+.info-panel__subtitle {
+  color: var(--green-light);
+  font-size: 0.85rem;
+}
+
+/* Contenido Principal */
+.info-panel__content {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1rem, 2vh, 1.5rem);
+}
+
+.info-panel__heading {
+  color: var(--surface);
+  font-size: clamp(1.75rem, 3.2vw, 2.5rem);
+  letter-spacing: -0.02em;
+  font-weight: 800;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.info-panel__heading-highlight {
+  color: var(--green-lime);
+}
+
+.info-panel__description {
+  color: var(--text-muted);
+  line-height: 1.6;
+  font-weight: 500;
+  font-size: 0.95rem;
+  max-width: 90%;
+}
+
+/* Footer / Estadísticas */
+.info-panel__footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-top: 1px solid var(--highlight-lime);
+  padding-top: clamp(1rem, 2.5vh, 1.5rem);
+}
+
+.info-panel__stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.info-panel__stat-value {
+  color: var(--surface);
+  font-weight: 700;
+  font-size: clamp(1.2rem, 2vw, 1.6rem);
+}
+
+.info-panel__stat-label {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+}
