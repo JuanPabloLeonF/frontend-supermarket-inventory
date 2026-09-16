@@ -8,5 +8,5 @@ export default defineConfig({
     react(),
     babel({ presets: [reactCompilerPreset()] })
   ],
-  base: "/frontend-supermarket-inventory/"
+  base: '/frontend-supermarket-inventory/',
 })
