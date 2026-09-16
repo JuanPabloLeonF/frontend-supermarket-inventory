@@ -28,7 +28,7 @@
   --warning:      #d97706;   /* Alertas — ej: stock bajo               */
 
   /* ── Overlays (para modales y fondos semitransparentes) ── */
-  --overlay-dark:     rgba(13, 31, 20, 0.60);
+  --overlay-dark:     rgba(16, 31, 22, 0.315);
   --overlay-light:    rgba(247, 249, 247, 0.80);
   --border-subtle:    rgba(255, 255, 255, 0.10);  /* Bordes sobre fondo oscuro */
   --highlight-lime:   rgba(74, 222, 128, 0.12);   /* Círculos decorativos      */
