@@ -1,9 +1,20 @@
 .container-main {
-    width: var(--max-width);
-    height: var(--min-height-dvh);
-    background-color: aquamarine;
+  width: var(--max-width);
+  height: var(--max-height-dvh);
+  background-color: aquamarine;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (width < 768px) {
+  .container-main {
+    width: var(--max-width-dvw);
+    height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+  }
 }

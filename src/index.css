@@ -51,9 +51,10 @@
 
   /* Tamaño de ancho y alto */
   --max-width-dvw: 100dvw;
-  --min-height-dvh: 100dvh;
+  --max-height-dvh: 100dvh;
   --max-width: 1280px;
-  --min-width: 768px;
+  --medium-width: 768px;
+  --min-witdth: 365px;
 }
 
 /* ==========================================================================
@@ -74,8 +75,9 @@ html {
 
 body {
   /* Uso de viewport dinámico para móviles */
-  max-width: var(--max-width-dvw);
-  min-height: var(--min-height-dvw);
+  width: var(--max-width-dvw);
+  max-width: var(--max-width);
+  height: auto;
   background-color: var(--surface);
   color: var(--color-text);
 }
@@ -110,9 +112,10 @@ a {
 
 /* Contenedor principal de React */
 #root {
-  max-width: var(--max-width-dvw);
-  min-height: var(--min-height-dvw);
+  width: inherit;
+  height: inherit;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }

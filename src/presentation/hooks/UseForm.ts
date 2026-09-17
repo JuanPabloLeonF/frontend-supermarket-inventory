@@ -1,6 +1,6 @@
 import { useState, type ChangeEvent, type SubmitEvent } from "react";
 
-export function useForm<T>(initialValues: T) {
+export function useFormulary<T>(initialValues: T) {
 
     const [values, setValues] = useState<T>(initialValues);
 
@@ -12,19 +12,13 @@ export function useForm<T>(initialValues: T) {
         }));
     }
 
-    const submitFormulary = (event: SubmitEvent<HTMLFormElement>): void => {
-        event.preventDefault(); 
-        console.log("Datos capturados:", values);
-        resetForm();
-    };
-
     const resetForm = (): void => {
         setValues(initialValues);
     };
 
     return  {
         handleChange,
-        submitFormulary,
+        resetForm,
         values
     }
 }

@@ -6,3 +6,13 @@
     justify-content: start;
     align-items: start;
 }
+
+@media (width < 768px ) {
+    .main-login {
+        width: var(--max-width-dvw);
+        height: auto;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
