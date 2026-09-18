@@ -1,18 +1,30 @@
 .main-login {
-    width: 800px;
-    height: 600px;
-    display: flex;
-    flex-direction: row;
-    justify-content: start;
-    align-items: start;
+  width: 90%;
+  max-width: 900px;
+  min-height: 570px; 
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  overflow: hidden;
 }
 
-@media (width < 768px ) {
-    .main-login {
-        width: var(--max-width-dvw);
-        height: auto;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
+@media (width < 768px) {
+  .main-login {
+    width: 100%;
+    min-height: auto;
+    flex-direction: column;
+    box-shadow: none;
+    border-radius: 0;
+  }
+}
+
+@media (height < 600px) and (orientation: landscape) {
+  .main-login {
+    min-height: auto;
+    height: auto;
+    margin: 1.5rem 0;
+  }
 }

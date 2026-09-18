@@ -2,7 +2,7 @@
   position: relative;
   background-color: var(--green-deep);
   width: 40%;
-  height: 100%;
+  min-height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -196,5 +196,25 @@
     border: none;
     padding: 0;
     order: 3;
+  }
+}
+
+@media (height < 600px) and (orientation: landscape) {
+  .info-panel {
+    padding: 1rem;
+  }
+
+  .info-panel__heading {
+    font-size: 1.5rem;
+    line-height: 1.2;
+  }
+
+  .info-panel__description {
+    font-size: 0.8rem;
+    line-height: 1.3;
+  }
+
+  .info-panel__footer {
+    padding-top: 0.5rem;
   }
 }

@@ -50,8 +50,6 @@
   -moz-osx-font-smoothing: grayscale;
 
   /* Tamaño de ancho y alto */
-  --max-width-dvw: 100dvw;
-  --max-height-dvh: 100dvh;
   --max-width: 1280px;
   --medium-width: 768px;
   --min-witdth: 365px;
@@ -75,10 +73,11 @@ html {
 
 body {
   /* Uso de viewport dinámico para móviles */
-  width: var(--max-width-dvw);
+  width: 100%;
   max-width: var(--max-width);
-  height: auto;
+  min-height: 100dvh;
   background-color: var(--surface);
+  margin: 0 auto;
   color: var(--color-text);
 }
 
@@ -112,8 +111,8 @@ a {
 
 /* Contenedor principal de React */
 #root {
-  width: inherit;
-  height: inherit;
+  width: 100%;
+  min-height: 100dvh;
   display: flex;
   flex-direction: column;
   align-items: center;

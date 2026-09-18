@@ -1,18 +1,19 @@
 .info-formulary-login {
   background-color: var(--surface);
   width: 60%;
-  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   padding: 1.5rem;
+  gap: 1.5rem;
 }
 
 .info-formulary-login__header {
   width: 100%;
-  height: 35%;
   display: flex;
   flex-direction: column;
-  align-items: start;
-  justify-content: space-between;
-  color: var(--text-muted);
+  align-items: flex-start;
+  gap: 1rem;
 }
 
 .info-formulary-login__logo-wrapper {
@@ -67,16 +68,13 @@
 
 .formulary-login {
   width: 100%;
-  height: 55%;
 }
 
 .formulary-login > form {
   width: 100%;
-  height: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
+  gap: 1.75rem;
 }
 
 .formulary-login form label {
@@ -163,20 +161,19 @@
 }
 
 .formulary-login > form > button {
-  background-color: transparent;
+  background-color: var(--green-deep);
+  color: var(--white);
   border: none;
-  border-radius: 5px;
-  box-shadow: 0 4px 14px var(--overlay-dark);
-  width: 80%;
-  height: 15%;
+  border-radius: 6px;
+  width: 100%;
+  padding: 0.75rem;
+  font-weight: 600;
   cursor: pointer;
-  transition:
-    box-shadow 0.25s ease,
-    color 0.25s ease;
+  transition: background-color 0.25s ease;
 }
 
 .formulary-login > form > button:hover {
-  color: var(--green-mid);
+  background-color: var(--green-light);
 }
 
 .info-formulary-login_footer {
@@ -200,6 +197,7 @@
   .info-formulary-login {
     width: 100%;
     height: auto;
+    gap: 2rem;
   }
 
   .info-formulary-login__header {
@@ -208,6 +206,25 @@
 
   .formulary-login {
     width: 100%;
-    height: 250px;
+    height: 200px;
+  }
+}
+
+@media (height < 600px) and (orientation: landscape) {
+  .info-formulary-login {
+    padding: 1rem;
+    gap: 2rem;
+  }
+
+  .info-formulary-login__header {
+    gap: 0.7rem;
+  }
+
+  .formulary-login > form {
+    gap: 2rem;
+  }
+
+  .input-container {
+    height: 38px;
   }
 }

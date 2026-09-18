@@ -1,20 +1,8 @@
 .container-main {
-  width: var(--max-width);
-  height: var(--max-height-dvh);
-  background-color: aquamarine;
+  width: 100%;
+  min-height: 100dvh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-}
-
-@media (width < 768px) {
-  .container-main {
-    width: var(--max-width-dvw);
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
 }
