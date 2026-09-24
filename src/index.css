@@ -2,27 +2,78 @@
    1. VARIABLES DE TEMA Y TIPOGRAFÍA
    ========================================================================== */
 :root {
-
   /* Fuentes */
-  --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-sans:
+    "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    sans-serif;
 
-  /* Base */
+  /* Color de Acento Principal (Morados Elegantes) */
+  --color-primary: #7c3aed; /* Morado principal (botones, badges activos) */
+  --color-primary-hover: #6d28d9; /* Morado al pasar el mouse (hover) */
+  --color-primary-active: #5b21b6; /* Morado al hacer click (active) */
+  --color-primary-light: #f3e8ff; /* Morado muy suave para fondos de íconos o badges */
+  --color-primary-border: #d8b4fe; /* Borde morado sutil para enfocar campos (focus) */
+
+  /* Color Secundario (Azules Profundos) */
+  --color-secondary: #2563eb; /* Azul vibrante complementario */
+  --color-secondary-hover: #1d4ed8; /* Azul hover */
+  --color-secondary-light: #eff6ff; /* Fondo azul claro sutil */
+
+  /* Colores de Fondo (Canvas & Card Layouts) */
+  --bg-app: #f8fafc; /* Fondo general de la app (Gris/Blanco Off-white suave) */
+  --bg-surface: #ffffff; /* Fondo de tarjetas, modales y formularios (Blanco puro) */
+  --bg-input: #f1f5f9; /* Fondo suave para inputs estilo cápsula */
+  --bg-input-hover: #e2e8f0; /* Fondo de input al interactuar */
+
+  /* Colores Neutrales (Escala de Negros, Grises y Blancos) */
+  --text-main: #0f172a; /* Negro/Azul noche para títulos principales */
+  --text-muted: #64748b; /* Gris neutro para subtítulos y placeholders */
+  --text-disabled: #94a3b8; /* Gris para textos deshabilitados */
+  --text-on-primary: #ffffff; /* Blanco puro para texto sobre botones morados */
+
+  /* Bordes */
+  --border-subtle: #e2e8f0; /* Borde gris claro para tarjetas y contenedores */
+  --border-strong: #cbd5e1; /* Borde definido para campos e inputs */
+
+  /* Sombras Modernas (Soft Shadows) */
+  --shadow-white: rgba(255, 255, 255, 0.884);
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md:
+    0 4px 6px -1px rgba(15, 23, 42, 0.06), 0 2px 4px -2px rgba(15, 23, 42, 0.04);
+  --shadow-lg:
+    0 10px 15px -3px rgba(15, 23, 42, 0.08),
+    0 4px 6px -4px rgba(15, 23, 42, 0.03);
+  --shadow-glow-purple: 0 0 20px -3px rgba(124, 58, 237, 0.25);
+
+  /* Estados y Feedback */
+  --color-error-bg: #fef2f2; /* Fondo de alertas de error */
+  --color-error-text: #1d1212; /* Texto de error */
+  --color-error-border: #fca5a5; /* Borde de alerta de error */
+  --color-success-bg: #f0fdf4; /* Fondo de éxito */
+  --color-success-text: #16a34a; /* Texto de éxito */
+
+  /* Radios de Bordes (Estilo Cápsula/Pill) */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-pill: 9999px; /* Bordes ultra redondeados para tus inputs/botones */
+
+  /* Base & Estilos Globales */
   font-family: var(--font-sans);
   font-size: 16px;
   line-height: 1.5;
-  color: black;
-  background-color: white;
-  color-scheme: light dark;
+  color: var(--text-main);
+  background-color: var(--bg-app);
 
   /* Renderizado de texto */
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  /* Tamaño de ancho y alto */
+  /* Tamaños de Ancho */
   --max-width: 1280px;
   --medium-width: 768px;
-  --min-witdth: 365px;
+  --min-width: 365px;
 }
 
 /* ==========================================================================
@@ -44,9 +95,7 @@ body {
   width: 100%;
   max-width: var(--max-width);
   min-height: 100dvh;
-  background-color: white;
   margin: 0 auto;
-  color: black;
 }
 
 /* ==========================================================================
