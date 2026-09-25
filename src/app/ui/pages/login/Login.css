@@ -1,41 +1,59 @@
 .container-login {
   width: 100dvw;
+  height: 100dvh;
   min-height: 100dvh;
   position: relative;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  background-color: rgb(0, 0, 0);
+  justify-content: space-around;
+  background-image: url("/src/app/ui/assets/imgs/bg-img-login-mobile.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
-.container-login_hero-img {
+.container-login_title {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  position: absolute;
-  top: 0;
-  left: 0;
-  -webkit-mask-image: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 1) 0%,
-    rgba(0, 0, 0, 0.7) 50%,
-    rgba(0, 0, 0, 0) 100%
-  );
-  mask-image: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 1) 0%,
-    rgba(0, 0, 0, 0.7) 50%,
-    rgba(0, 0, 0, 0) 100%
-  );
+  height: 20dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.container-login_title div {
+  width: 90px;
+  height: 90px;
+  background-color: rgba(228, 226, 226, 0.877);
+  border-radius: 0.5rem;
+}
+
+.container-login_title h1 {
+  width: 100%;
+  font-size: clamp(1.8rem, 1.5vw, 3rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+.container-login_title h1 > span:first-of-type {
+  color: var(--text-main);
+}
+
+.container-login_title h1 > span:last-child {
+  color: var(--color-primary-active);
 }
 
 .container-login_container-formulary {
-  background-color: transparent;
   width: 100%;
-  height: 70dvh;
+  height: 60dvh;
   z-index: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: stretch;
+  justify-content: center;
 }

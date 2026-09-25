@@ -1,0 +1,17 @@
+.btn-generic {
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-primary);
+    outline: none;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 0.2rem;
+    color: var(--text-on-primary);
+    cursor: pointer;
+    font-size: clamp(0.8rem, 2vw, 1rem);
+    transition: background-color 0.25s ease;
+}
+
+.btn-generic:hover {
+    background-color: var(--color-primary-hover);
+}

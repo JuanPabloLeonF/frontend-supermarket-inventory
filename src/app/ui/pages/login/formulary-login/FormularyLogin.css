@@ -1,71 +1,134 @@
 .container-form-login {
-    background-color: var(--shadow-white);
-    width: 100%;
-    height: 70%;
-    background-color: red;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
 }
 
 .container-form-login_container-label {
-    background-color: yellow;
-    width: 80%;
-    height: 50px;
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    justify-content: end;
-    font-size: clamp(0.9rem, 2vw, 1.1rem);
-    position: relative;
+  width: 80%;
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: end;
+  font-size: clamp(0.9rem, 1.5vw, 1rem);
+  position: relative;
+  color: var(--text-muted);
 }
 
 .container-form-login_container-label_container_input {
-    width: 100%;
-    height: 30px;
+  width: 100%;
+  height: 30px;
+  border-bottom: 1px solid var(--text-muted);
+  transition: border 0.25s ease;
 }
 
 .container-form-login_container-label_span {
-    position: absolute;
-    top: 0;
-    left: 1.5%;
-    width: fit-content;
-    font-weight: 500;
-    transform: translate(36px, 25px);
-    transition: transform 0.25s ease;
+  position: absolute;
+  top: 0;
+  left: 1.5%;
+  width: fit-content;
+  font-weight: 500;
+  transform: translate(36px, 25px);
+  transition: transform 0.25s ease;
 }
 
 .container-form-login_container-label_container_input > input {
-    width: 100%;
-    height: 100%;
-    outline: none;
-    border: none;
-    padding-left: 2.5rem;
-    border-bottom: 1px solid black;
+  width: 90%;
+  height: 100%;
+  outline: none;
+  border: none;
+  padding-left: 2.5rem;
+  background-color: transparent;
 }
 
 .container-form-login_container-label_container_input div {
-    width: 25px;
-    height: 25px;
-    position: absolute;
-    top: 45%;
-    left: 1%;   
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  cursor: pointer;
+  top: 45%;
+  left: 1%;
 }
 
-.container-form-login_container-label:focus-within .container-form-login_container-label_span,
-.container-form-login_container-label:has(input:not(:placeholder-shown)) .container-form-login_container-label_span {
-    transform: translate(0, 0);
-    color: red;
+.container-form-login_container-label_container_input button {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: 45%;
+  right: 1%;
+  z-index: 2;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}
+
+.container-form-login_container-label:focus-within
+  .container-form-login_container-label_span,
+.container-form-login_container-label:has(input:not(:placeholder-shown))
+  .container-form-login_container-label_span {
+  transform: translate(0, 0);
+  color: var(--color-primary-active);
+}
+
+.container-form-login_container-label_container_input:focus-within,
+.container-form-login_container-label_container_input:has(
+  input:not(:placeholder-shown)
+),
+.container-form-login_container-label_container_input:has(
+  input:-webkit-autofill
+),
+.container-form-login_container-label_container_input:has(input:autofill) {
+  border-color: var(--color-primary-active);
+  color: var(--color-primary-active);
 }
 
 .container-form-login_container-label_container_input:focus-within > div,
-.container-form-login_container-label_container_input:has(input:not(:placeholder-shown)) > div {
-    background-color: green;
+.container-form-login_container-label_container_input:has(
+    input:not(:placeholder-shown)
+  )
+  > div {
+  color: var(--color-primary-active);
 }
 
 .container-form-login_container-label_container_input > input:focus,
-.container-form-login_container-label_container_input > input:not(:placeholder-shown) {
-    border-bottom: 1px solid var(--color-primary, #7c3aed);
-    color: red;
+.container-form-login_container-label_container_input
+  > input:not(:placeholder-shown) {
+  color: var(--color-primary-active);
+}
+
+.container-form-login_container-label_container_input:has(
+    input:-webkit-autofill
+  )
+  > div,
+.container-form-login_container-label_container_input:has(input:autofill)
+  > div {
+  color: var(--color-primary-active);
+}
+
+.container-form-login_container-label:has(input:-webkit-autofill)
+  .container-form-login_container-label_span,
+.container-form-login_container-label:has(input:autofill)
+  .container-form-login_container-label_span {
+  transform: translate(0, 0);
+  color: var(--color-primary-active);
+}
+
+.container-form-login_container-label_container_input > input:-webkit-autofill,
+.container-form-login_container-label_container_input > input:autofill {
+  -webkit-text-fill-color: var(--color-primary-active) !important;
+}
+
+.container-form-login_button {
+  width: 60%;
+  height: 35px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
 }
