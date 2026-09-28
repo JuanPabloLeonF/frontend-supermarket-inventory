@@ -6,7 +6,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
   background-image: url("/src/app/ui/assets/imgs/bg-img-login-mobile.png");
   background-repeat: no-repeat;
   background-position: center;
@@ -15,7 +15,7 @@
 
 .container-login_title {
   width: 100%;
-  height: 20dvh;
+  height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -56,4 +56,12 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.wrapper-img {
+  background-color: red;
+  width: 150px;
+  height: auto;
+  position: absolute;
+  bottom: 6%;
 }

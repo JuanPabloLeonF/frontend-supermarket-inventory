@@ -146,4 +146,54 @@ a {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background-color: transparent;
+}
+
+/* ==========================================================================
+   4. Animaciones Reutilizables
+   ========================================================================== */
+
+@keyframes fadeScaleIn {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0.2;
+    transform: scale(0.3);
+  }
+}
+
+.animation-fadeScaleIn {
+  animation: fadeScaleIn 4s ease-in-out infinite alternate;
+}
+
+@keyframes fadeIn {
+  0% {
+    transform: translateY(0) perspective(150px) rotateX(0deg) rotateY(-40deg);
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(-10px) perspective(150px) rotateX(0deg)
+      rotateY(-40deg);
+    opacity:0.6;
+  }
+}
+
+.animation-fadeIn {
+  animation: fadeIn 2s ease-in-out infinite alternate;
+}
+
+@keyframes pulseColorIn {
+  0% {
+    fill: red;
+  }
+  100% {
+    fill: rgb(124, 0, 0);
+    transform: translateX(30%);
+  }
+}
+
+.animation-pulseColorIn {
+  animation: pulseColorIn 1s ease-in-out infinite alternate;
 }

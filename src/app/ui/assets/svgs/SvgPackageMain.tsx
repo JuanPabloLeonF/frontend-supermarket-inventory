@@ -1,0 +1,84 @@
+import type { StylesSvgsProps } from "../../../share/utils/TypeUtils";
+
+export function SvgPackageMain({
+  boxShadow,
+  backgroundColor,
+  width,
+  height,
+  padding,
+  borderRadius,
+  position,
+  top,
+  left,
+  right,
+  bottom,
+}: StylesSvgsProps): React.JSX.Element {
+  return (
+    <svg
+      style={{
+        boxShadow,
+        backgroundColor,
+        width,
+        height,
+        padding,
+        borderRadius,
+        position,
+        top,
+        left,
+        right,
+        bottom,
+        transform: "translateX(50%)",
+      }}
+      version="1.1"
+      id="Layer_1"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 512 512"
+      fill="#000000"
+    >
+      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+      <g
+        id="SVGRepo_tracerCarrier"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      ></g>
+      <g id="SVGRepo_iconCarrier">
+        {" "}
+        <polygon
+          style={{ fill: "#c9a8ff" }}
+          points="376.808,187.877 256,512 28.996,384.006 28.996,127.994 "
+        ></polygon>{" "}
+        <polygon
+          style={{ fill: "#c9a8ff" }}
+          points="256,0 28.996,127.994 256,256 256,512 483.004,384.006 483.004,127.994 "
+        ></polygon>{" "}
+        <polygon
+          style={{ fill: "#c9a8ff" }}
+          points="256,256 256,512 483.004,384.006 483.004,127.994 "
+        ></polygon>{" "}
+        <polyline
+          style={{ fill: "#7c3aed" }}
+          points="174.431,466.018 174.431,210.006 268.189,157.134 268.201,157.134 268.199,157.134 191.405,157.134 191.794,121.013 191.8,121.008 104.201,170.4 104.201,425.526 "
+        ></polyline>{" "}
+        <polyline
+          style={{ fill: "#7c3aed" }}
+          points="174.431,466.018 174.431,210.006 104.201,170.4 104.201,425.526 "
+        ></polyline>{" "}
+        <polyline
+          style={{ fill: "#7c3aed" }}
+          points="331.708,42.166 237.949,95.039 237.937,95.039 237.94,95.039 314.734,95.039 314.345,131.16 314.339,131.164 401.937,81.773 "
+        ></polyline>{" "}
+        <g>
+          {" "}
+          <polygon
+            style={{ fill: "#6d28d9" }}
+            points="374.872,292.189 340.931,268.603 305.907,330.967 331.691,316.469 331.691,422.122 349.634,412.002 349.634,306.381 "
+          ></polygon>{" "}
+          <polygon
+            style={{ fill: "#6d28d9" }}
+            points="370.318,361.73 404.259,385.316 439.283,322.952 413.498,337.45 413.498,231.797 395.555,241.917 395.555,347.54 "
+          ></polygon>{" "}
+        </g>{" "}
+      </g>
+    </svg>
+  );
+}

@@ -5,13 +5,15 @@ import { SvgEyeOpen } from "../../../assets/svgs/SvgEyeOpen";
 import { SvgLock } from "../../../assets/svgs/SvgLock";
 import { ButtonGeneric } from "../../../layouts/button/ButtonGeneric";
 import "./FormularyLogin.css";
+import { NavLink } from "react-router";
+import { PATH_ROUTES } from "../../../../share/utils/ConstantsApp";
 
 export function FormularyLogin(): React.JSX.Element {
   const [isActivePassword, setActivePassword] = useState<boolean>(false);
 
   const toggleActivePassword = () => {
-    setActivePassword(prev => !prev);
-  }
+    setActivePassword((prev) => !prev);
+  };
 
   return (
     <form action="" className="container-form-login">
@@ -42,10 +44,15 @@ export function FormularyLogin(): React.JSX.Element {
             placeholder=" "
           />
           <button onClick={toggleActivePassword} type="button">
-            {isActivePassword ? <SvgEyeClosed /> : <SvgEyeOpen/>}
+            {isActivePassword ? <SvgEyeClosed /> : <SvgEyeOpen />}
           </button>
         </div>
       </label>
+      <div className="container-form-login_p-link">
+        <NavLink to={PATH_ROUTES.LOGIN}>
+          <p>¿0lvidaste tu contraseña?</p>
+        </NavLink>
+      </div>
       <div className="container-form-login_button">
         <ButtonGeneric type="button" text="Iniciar sesion" />
       </div>
