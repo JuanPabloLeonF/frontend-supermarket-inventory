@@ -1,15 +1,22 @@
 import "./Login.css";
 
-import imgFooterFormulary from "../../assets/imgs/img-footer-formulary.jpg";
+import imgFooterFormulary from "../../assets/imgs/img-footer-formulary.png";
+import imgLogo from "../../assets/imgs/logo.png";
+import imgBgMobile from "../../assets/imgs/bg-img-login-mobile.png";
+import imgBgDesktop from "../../assets/imgs/bg-img-login-desktop.png";
 
 import { SvgAnalitycs } from "../../assets/svgs/SvgAnalitycs";
 import { SvgIconPackage } from "../../assets/svgs/SvgIconPackage";
-import { SvgLogoApp } from "../../assets/svgs/SvgLogoApp";
 import { FormularyLogin } from "./formulary-login/FormularyLogin";
 
 export function Login(): React.JSX.Element {
   return (
     <section className="container-login">
+      <picture className="login-bg">
+        <source media="(min-width: 768px)" srcSet={imgBgDesktop} />
+        <img src={imgBgMobile} alt="logo" fetchPriority="high" loading="lazy" />
+      </picture>
+
       <SvgIconPackage
         boxShadow="var(--shadow-lg)"
         backgroundColor="var(--bg-surface)"
@@ -33,11 +40,15 @@ export function Login(): React.JSX.Element {
         right="5%"
       />
 
-      <img className="wrapper-img" src={imgFooterFormulary} alt="imagen footer" />
+      <img
+        className="wrapper-img"
+        src={imgFooterFormulary}
+        alt="imagen footer"
+      />
 
       <div className="container-login_title">
         <div>
-          <SvgLogoApp />
+          <img src={imgLogo} alt="Logo de la empresa" />
         </div>
         <h1>
           <span>Supermarket</span>

@@ -48,7 +48,7 @@
   /* Estados y Feedback */
   --color-error-bg: #fef2f2; /* Fondo de alertas de error */
   --color-error-text: #1d1212; /* Texto de error */
-  --color-error-border: #fca5a5; /* Borde de alerta de error */
+  --color-error-border: #d13737; /* Borde de alerta de error */
   --color-success-bg: #f0fdf4; /* Fondo de éxito */
   --color-success-text: #16a34a; /* Texto de éxito */
 

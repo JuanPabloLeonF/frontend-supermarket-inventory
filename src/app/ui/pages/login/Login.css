@@ -3,14 +3,29 @@
   height: 100dvh;
   min-height: 100dvh;
   position: relative;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-image: url("/src/app/ui/assets/imgs/bg-img-login-mobile.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+}
+
+.container-login .login-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.container-login .login-bg > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  user-select: none;
+  pointer-events: none;
 }
 
 .container-login_title {
@@ -26,7 +41,6 @@
 .container-login_title div {
   width: 90px;
   height: 90px;
-  background-color: rgba(228, 226, 226, 0.877);
   border-radius: 0.5rem;
 }
 
@@ -59,9 +73,10 @@
 }
 
 .wrapper-img {
-  background-color: red;
-  width: 150px;
+  width: 80%;
+  max-width: 300px;
   height: auto;
   position: absolute;
-  bottom: 6%;
+  bottom: 0%;
 }
+

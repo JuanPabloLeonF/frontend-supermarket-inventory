@@ -34,16 +34,16 @@ export function SvgIconPackage({
         <path
           d="m128 24 91 52v104l-91 52-91-52V76z"
           stroke="#7C3AED"
-          stroke-width="14"
-          stroke-linejoin="round"
+          strokeWidth="14"
+          strokeLinejoin="round"
         />
         <path
           d="m37 77 91 52 91-52M128 129v103"
           stroke="#7C3AED"
-          stroke-width="14"
-          stroke-linejoin="round"
+          strokeWidth="14"
+          strokeLinejoin="round"
         />
-        <path d="m81 51 91 52" stroke="#A78BFA" stroke-width="12" />
+        <path d="m81 51 91 52" stroke="#A78BFA" strokeWidth="12"/>
       </svg>
     </div>
   );
